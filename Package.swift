@@ -5,19 +5,30 @@ import PackageDescription
 
 let package = Package(
     name: "FakeStoreAuthentication",
+    platforms: [.iOS(.v17), .macOS(.v14), .watchOS(.v7)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "FakeStoreAuthentication",
             targets: ["FakeStoreAuthentication"]),
     ],
-    targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "FakeStoreAuthentication"),
+    dependencies: [
+        .package(url: "https://github.com/andresduke024/swift-dependency-injector", .upToNextMinor(from: "1.4.0")),
+        .package(url: "https://github.com/andresduke024/FakeStoreCommons",  .upToNextMinor(from: "1.0.0")),
+    ],
+    targets: [        .target(
+            name: "FakeStoreAuthentication",
+            dependencies: [
+                .product(name: "SwiftDependencyInjector", package: "swift-dependency-injector"),
+                .product(name: "FakeStoreCommons", package: "FakeStoreCommons"),
+            ]
+        ),
         .testTarget(
             name: "FakeStoreAuthenticationTests",
-            dependencies: ["FakeStoreAuthentication"]),
+            dependencies: [
+                "FakeStoreAuthentication",
+                .product(name: "SwiftDependencyInjector", package: "swift-dependency-injector"),
+                .product(name: "FakeStoreCommons", package: "FakeStoreCommons"),
+            ]
+        ),
     ]
 )

@@ -1,0 +1,24 @@
+{
+  "originHash" : "507d4c0ba2ccbb85878a8a8391f2420240d2658684465e2e910f2c75117406b5",
+  "pins" : [
+    {
+      "identity" : "fakestorecommons",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/andresduke024/FakeStoreCommons",
+      "state" : {
+        "revision" : "de4ee40e43156a9e0ad9c76cc63bf29a1c92292a",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-dependency-injector",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/andresduke024/swift-dependency-injector",
+      "state" : {
+        "revision" : "892b618230e4b2c878ac851bf32779c4664d5437",
+        "version" : "1.4.1"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "768F0BD5-B61C-4009-A5DC-983E1E3AEA86",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "FakeStoreAuthentication",
+          "name" : "FakeStoreAuthentication"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "FakeStoreAuthenticationTests",
+        "name" : "FakeStoreAuthenticationTests"
+      }
+    }
+  ],
+  "version" : 1
+}
